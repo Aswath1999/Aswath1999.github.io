@@ -1,0 +1,259 @@
+@import url(./fonts.css);
+
+@import url(./partials/_variables.css);
+
+@import url(./partials/_global.css);
+/* <=============================Name page=============================> */
+section.Main{
+    background: url(../U2.jpg) ;
+    height: 100vh;
+    width: -webkit-fill-available;
+    height: calc(var(--vh, 1vh) * 100);
+    background-size: cover; 
+}
+section.Main .flex-container{
+    height: calc(var(--vh, 1vh) * 100);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:auto;
+}
+section.Main .flex-container .flex-item { 
+    color:#ffffff;  
+    font-family: var(--robotocondensed);
+    font-style: italic; 
+    font-size: 4rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+section.Main .flex-container .flex-item:nth-of-type(2){
+    font-size: 2rem;
+    font-weight:500;
+    color: black;
+    font-style: normal;
+    font-family: var(--roboto);
+    margin-left:1rem;
+    margin-right:17rem;
+}
+section.Main .flex-container .flex-item a{
+    color: black;
+    text-decoration: none;
+}
+section.Main .flex-container .flex-item.button:hover{
+    background-color:rgb(207, 69, 14);
+    transition: ease-out .4s;
+    cursor:pointer;
+}
+
+section.Main .flex-container .flex-item span{
+    color: var(--textcolor);
+    font-weight:500;
+    font-size: 7rem;
+}
+/* Mobile phones design */
+@media only screen and (max-width: 500px){
+    section.Main{
+        background-position: center;
+    }
+    section.Main .flex-container{
+        align-content: center;
+    }
+    section.Main .flex-container .flex-item { 
+        font-size: 2.5rem;
+        margin: 10px;
+        padding-left: 10px;
+    }
+    section.Main .flex-container .flex-item.button{
+        display: block;
+    }
+    section.Main .flex-container .flex-item:nth-of-type(2){
+        font-size:1.5rem;
+        font-weight: 500;
+        margin: 0;  
+        margin-top: 15px;
+        margin-left: 25px;
+    }
+    section.Main .flex-container .flex-item span{
+        font-weight: 500;
+        font-size: 4rem;
+    }
+}
+
+/* <============================= End Name page=============================> */
+
+
+/* <============================= About me page=============================> */
+section.aboutme{
+    background: url(../cristian-castillo-vktJC0johyU-unsplash.jpg);
+    /* background: url(../cristian-castillo-vktJC0johyU-unsplash.jpg); */
+    height: 100vh;   /*Just in case calc doesn't work in some browsers*/
+    height: calc(var(--vh, 1vh) * 100);
+    background-size: center;
+
+}
+section.aboutme .grid-container{
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 100px 2fr;
+    grid-gap: 0px;
+    color: #ffffff;
+    grid-template-areas: "column-1 column-2 column-3";
+    justify-items: center;
+    overflow:hidden;
+}
+
+
+grid-item:nth-child(1) {  
+    text-decoration: underline;
+    text-decoration-color: var(--textcolor);
+    margin:2rem;
+    padding-left: 3rem;
+    grid-column: 1;
+    grid-column: span 3;
+    width: 100%;
+    font-size: 4rem; 
+    font-style: italic;
+}
+grid-item:nth-child(2) {
+    grid-column: 2;
+    grid-row:2;
+    padding-left:5rem;
+}
+grid-item img{
+    border-radius:50%;
+    height:510px;
+}
+grid-item:nth-child(3) { 
+    grid-column: 3;
+    font-family: var(--robotocondensed);
+    line-height:2.5rem;
+    font-size:2rem;
+    font-weight: 400;
+    padding-top: 80px;
+    padding-right: 30px;
+}
+grid-item span {
+    font-size: 4rem;
+    color:var(--textcolor);
+}
+
+/* =============Mobile================ */
+@media only screen and (max-width: 900px){
+    section.aboutme{
+        height:100%;
+    }
+    section.aboutme .grid-container{
+        height:100%;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: 300px auto;
+        overflow:auto;
+        grid-template-areas: "column-2 column-1 column-3";
+
+    }
+    grid-item:nth-child(2){
+        grid-row: 1;
+        grid-column: span 3;
+        padding-left:2rem;
+        padding-right:2rem;
+    }
+    grid-item:nth-child(1){
+        grid-column: span 3;
+        grid-row:2;
+    }
+    grid-item:nth-child(3){
+        grid-row:3;
+        grid-column: span 3;
+        font-size: 1.5rem;
+        padding-top: 0rem;
+        padding-left:1rem;
+        margin-top: 2px;
+    }
+    
+    grid-item img{
+        width: 350px;
+        height:260px;
+    }
+}
+@media (min-width:1000px) and (max-width: 1200px){
+    
+    grid-item:nth-child(3) { 
+        padding-top: 0;
+        padding-right: 1rem;
+    }
+    grid-item{
+        margin-top: 2rem;
+        padding-right: 1rem;
+    }
+    grid-item:nth-child(1){
+        margin-top:1rem;
+    }
+
+}
+/* <============================= End of About me page=============================> */
+
+
+/* <============================= Skills page=============================> */
+section.skills{
+    height: 100%;
+    width: -webkit-fill-available;  
+    background: #F6E4CF;
+}
+section.skills .flex-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; 
+}
+section.skills h1{
+    font-family: var(--robotocondensed);
+    font-size:4rem;
+    font-style: italic;
+    text-decoration: underline;
+    padding:4rem;
+}
+section.skills .card .icon{
+    transition: .3s ease;
+    padding-top:70px ;
+}
+section.skills .card  h2{
+    padding-top: 10px;
+    transition: .5s ease;
+}
+section.skills .card p{
+    padding-top:10px;
+    transition: .5s ease;
+    display:none;
+}
+section.skills .card:hover p{
+    display:inline;
+}
+section.skills .card:hover h2{
+    padding-top:100px;
+}
+section.skills .card:hover .icon{
+    position:absolute;
+    top:-25px;
+    left:42%;
+    z-index: 1;
+    padding-top: 0px;
+}
+section.skills .card{
+    color:#38a762d7;
+    font-weight: 500;
+    font-family: var(--roboto);
+    font-size:2em;
+}
+section.skills .card p{
+    color: black;
+    font-size:1.2rem;
+}
+
+
+
+/* <=============================End of Skills page=============================> */
+
+
