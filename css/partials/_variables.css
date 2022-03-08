@@ -51,8 +51,7 @@ table {
 :root{
 	--textcolor:rgb(248, 143, 6);
 	--shadow-color:  0px 10px 30px rgba(78, 60, 138, 0.3);
-    --box-shadow: 0px 10px 30px rgba(26, 25, 31, 0.205);
-
+    --box-shadow: 0px 10px 15px  rgba(26, 25, 31, 0.205);
 
 	/* Font declaration */
 	--roboto: 'Roboto';	

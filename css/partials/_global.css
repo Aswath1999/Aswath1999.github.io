@@ -21,21 +21,9 @@ section .card{
     box-sizing: border-box;
     transition: ease-in .3s;
 }
-section .card::after{
-    -webkit-transition: all .3s ease;
-    transition: all .3s ease;
-}
-section .card:hover::after{
-    content: " ";
-    display: block;
-    position: absolute;
-    height: 1px;
-    top: -1px;
-    background: #ffffff;
-    width: 52px;
-    left: 42%;
-    z-index: 0;
-}
-section .card:nth-child(3):hover::after{
-    width:66px;
+.flex-container{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around; 
 }

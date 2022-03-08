@@ -13,8 +13,6 @@ section.Main{
 }
 section.Main .flex-container{
     height: calc(var(--vh, 1vh) * 100);
-    display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -202,12 +200,7 @@ section.skills{
     width: -webkit-fill-available;  
     background: #F6E4CF;
 }
-section.skills .flex-container{
-    display:flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around; 
-}
+
 section.skills h1{
     font-family: var(--robotocondensed);
     font-size:4rem;
@@ -251,9 +244,120 @@ section.skills .card p{
     color: black;
     font-size:1.2rem;
 }
-
+section .card::after{
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+section.skills .card:hover::after{
+    content: " ";
+    display: block;
+    position: absolute;
+    height: 1px;
+    top: -1px;
+    background: #ffffff;
+    width: 52px;
+    left: 42%;
+    z-index: 0;
+}
+section .card:nth-child(3):hover::after{
+    width:66px;
+}
 
 
 /* <=============================End of Skills page=============================> */
 
+/* <=============================My Projects page=============================> */
+section.myprojects{
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    width: -webkit-fill-available;  
+    background: #F6E4CF;
+}
+section.myprojects h1{
+    font-family: var(--robotocondensed);
+    font-size:4rem;
+    font-style: italic;
+    text-decoration: underline;
+    padding:4rem;
+}
+section.myprojects .card{
+    box-sizing: border-box;
+    border: none;
+    box-shadow: var(--box-shadow);
+    overflow:hidden;    
+}
+section.myprojects .card img{
+    max-width: 100%;
+    height:280px;
+}
 
+section.myprojects .card  h2{
+    font-family: var(--roboto);
+    font-weight: 500;
+    font-size:2rem; 
+}
+section.myprojects .card .bg-color{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    right: -100%;
+    background-color:#1b1a69; 
+    transition:.6s ease-in;
+    text-align: center;
+    margin: auto;
+    color:whitesmoke;
+    font-size:1.2rem;
+    line-height: 1.5rem;
+    font-family: var(--robotocondensed);
+}
+section.myprojects .card .bg-color h3{
+    color: whitesmoke;
+    font-size: 1.5rem;
+    padding-bottom: 15px;
+}
+section.myprojects .card .bg-color .button{
+    background-color:#1b1a69;
+    font-size:1.5rem;
+    border-radius:0;
+    border: 1px solid white;
+    padding: 5px;
+    margin-top:10px;
+    transition:.3s ease-in-out;
+}
+section.myprojects .card .bg-color .button:hover{
+    cursor:pointer;
+    background-color:#6a68aa;
+}
+section.myprojects .card .bg-color .button.margin{
+    margin-top:25px;
+}
+section.myprojects .card:hover .bg-color{
+    right:0;
+}
+@media only screen and (max-width: 900px){
+    section.myprojects{
+        height:100%;
+    }
+}
+
+/* <=============================End of My Projects page=============================> */
+
+
+/* <=============================Footer=============================> */
+.footer {
+    display:flex;
+    width: 100%;
+    background-color: rgba(8, 8, 8, 0.486);
+    color: white;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    line-height:1.5rem;
+    font-family: var(--robotocondensed);
+
+}
+
+
+/* <=============================End of footer=============================> */
