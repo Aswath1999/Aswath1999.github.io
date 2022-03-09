@@ -168,12 +168,14 @@ grid-item span {
         font-size: 1.5rem;
         padding-top: 0rem;
         padding-left:1rem;
+        padding-bottom: 1rem;
         margin-top: 2px;
     }
     
     grid-item img{
         width: 350px;
         height:260px;
+        padding-top: 35px;
     }
 }
 @media (min-width:1000px) and (max-width: 1200px){
@@ -340,6 +342,10 @@ section.myprojects .card:hover .bg-color{
         height:100%;
     }
 }
+@media (min-width:1000px) and (max-width: 1200px){
+    section.myprojects{
+        height:100%;
+    }
 
 /* <=============================End of My Projects page=============================> */
 
