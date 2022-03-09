@@ -346,7 +346,7 @@ section.myprojects .card:hover .bg-color{
     section.myprojects{
         height:100%;
     }
-
+}
 /* <=============================End of My Projects page=============================> */
 
 
@@ -362,7 +362,6 @@ section.myprojects .card:hover .bg-color{
     font-size: 1.2rem;
     line-height:1.5rem;
     font-family: var(--robotocondensed);
-
 }
 
 
