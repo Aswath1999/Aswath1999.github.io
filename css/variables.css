@@ -54,6 +54,6 @@ table {
     --box-shadow: 0px 10px 15px  rgba(26, 25, 31, 0.205);
 
 	/* Font declaration */
-	--roboto: 'Roboto';	
-    --robotocondensed: 'Roboto Condensed';
+	--roboto: './Roboto-Regular.ttf';	
+    --robotocondensed: './RobotoCondensed-Italic.ttf';
 }
