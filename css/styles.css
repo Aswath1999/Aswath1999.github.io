@@ -87,8 +87,8 @@ section.Main .flex-container .flex-item span{
 section.aboutme{
     background: url(../cristian-castillo-vktJC0johyU-unsplash.jpg);
     /* background: url(../cristian-castillo-vktJC0johyU-unsplash.jpg); */
-    height: 100vh;   /*Just in case calc doesn't work in some browsers*/
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100%;   /*Just in case calc doesn't work in some browsers*/
+    /* height: calc(var(--vh, 1vh) * 100); */
     background-size: center;
 
 }
@@ -124,9 +124,8 @@ grid-item:nth-child(2) {
 }
 grid-item img{
     border-radius:50%;
-    margin-top: 50px;
     width: 100%;
-    height:450px;
+    height:510px;
     align-items: center;
 
 }
